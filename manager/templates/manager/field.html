@@ -1,0 +1,6 @@
+<h1>{{ field.name }}</h1>
+<ul>
+{% for speciality in field.speciality_set.all %}
+	<li><a href="{% url 'manager:speciality' speciality.speciality_id %}">{{ speciality.name }}</a></li>
+{% endfor %}
+</ul>

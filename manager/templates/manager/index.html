@@ -1,0 +1,9 @@
+{% if fields %}
+	<ul>
+	{% for field in fields %}
+		<li><a href="{% url 'manager:field' field.field_id %}">{{ field.name }}</a></li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No fields are available.</p>
+{% endif %}
